@@ -1,0 +1,17 @@
+def mainEx01():
+
+    pilhaDePalavras = Pilha()
+
+    fim = False
+    while not fim:
+        palavra = input('Informe uma palavra ')
+
+        if palavra == '#fim':
+            fim = True
+        elif palavra == '#desempilha':
+            elemento = pilhaDePalavras.desempilha()
+            print(elemento)
+        elif palavra == '#tamanho':
+            print(pilhaDePalavras.tamanho())
+        else:
+            pilhaDePalavras.empilha(palavra)
